@@ -36,6 +36,7 @@ const AddCoffee = () => {
             text: "Product Uploaded successful",
             icon: "success",
           });
+          form.reset();
         }
       });
   };
@@ -50,7 +51,7 @@ const AddCoffee = () => {
           <BsArrowLeft></BsArrowLeft> Back to home
         </Link>
       </div>
-      <div className="mb-28 max-w-7xl mx-auto bg-[#F4F3F0] py-16 px-28">
+      <div className="mb-28 max-w-7xl mx-auto bg-[#F4F3F0] py-16 px-5 lg:px-28">
         <h1 className="text-4xl text-[#374151] font-rancho mb-4 text-center">
           Add New Coffee
         </h1>
@@ -61,8 +62,8 @@ const AddCoffee = () => {
           letters, as opposed to using Content here.
         </p>
         <form onSubmit={handleCoffeeSubmit}>
-          <div className="flex gap-6 justify-between">
-            <div className="w-1/2 mb-6">
+          <div className="md:flex gap-6 justify-between">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -82,7 +83,7 @@ const AddCoffee = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2 mb-6">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -103,8 +104,8 @@ const AddCoffee = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-6 justify-between">
-            <div className="w-1/2 mb-6">
+          <div className="md:flex gap-6 justify-between">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -124,7 +125,7 @@ const AddCoffee = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2 mb-6">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -145,8 +146,8 @@ const AddCoffee = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-6 justify-between">
-            <div className="w-1/2 mb-6">
+          <div className="md:flex gap-6 justify-between">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -166,7 +167,7 @@ const AddCoffee = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2 mb-6">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"

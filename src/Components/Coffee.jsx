@@ -3,9 +3,27 @@ import { AiFillEye } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import { BsFillPencilFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
-const Coffee = ({ coffee }) => {
+const Coffee = ({ coffee, handleCoffeeDelete }) => {
   const { _id, name, chef, photo } = coffee;
+
+  const handleDelete = () => {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        handleCoffeeDelete(_id);
+      } else {
+        swal("Cancel deletion!");
+      }
+    });
+  };
+
   return (
     <div className="flex items-center gap-5 p-8 bg-[#F5F4F1]">
       <img src={photo} alt="" />
@@ -36,7 +54,10 @@ const Coffee = ({ coffee }) => {
           </Link>
         </div>
         <div className="mb-4">
-          <button className="text-xl p-2.5 text-white bg-[#EA4744] rounded-md">
+          <button
+            onClick={handleDelete}
+            className="text-xl p-2.5 text-white bg-[#EA4744] rounded-md"
+          >
             <MdDelete></MdDelete>
           </button>
         </div>
@@ -49,4 +70,5 @@ export default Coffee;
 
 Coffee.propTypes = {
   coffee: PropTypes.object,
+  handleCoffeeDelete: PropTypes.func,
 };

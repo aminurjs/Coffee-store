@@ -12,7 +12,7 @@ const Home = () => {
     <>
       <Banner />
       <Quality />
-      <PopularProducts coffees={coffees} />
+      <PopularProducts loadedCoffee={coffees} />
       <Instagram />
     </>
   );

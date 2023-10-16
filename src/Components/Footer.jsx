@@ -9,7 +9,7 @@ import { BsFacebook } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer className="bg-[url(https://i.ibb.co/t4hSS9n/13.jpg)] bg-cover pt-28">
-      <div className="max-w-7xl mx-auto flex gap-32 pb-12">
+      <div className="max-w-7xl mx-auto md:flex gap-32 pb-12 px-5">
         <div className="md:w-1/2">
           <div className="flex gap-5 items-center">
             <img

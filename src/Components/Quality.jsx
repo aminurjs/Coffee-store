@@ -1,7 +1,7 @@
 const Quality = () => {
   return (
     <div className="bg-[#ECEAE3] py-14">
-      <div className="max-w-7xl mx-auto flex gap-5 ">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-5 px-5 ">
         <div>
           <img className="mb-4" src="https://i.ibb.co/tzGQ72D/1.png" alt="" />
           <h1 className="text-3xl text-[#331a15] font-rancho mb-4">

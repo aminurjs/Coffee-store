@@ -2,8 +2,8 @@ const Banner = () => {
   return (
     <div className="bg-[url(https://i.ibb.co/8cCNjLJ/3.png)] bg-cover bg-center py-72 lg:flex">
       <div className=" lg:w-2/5"></div>
-      <div className="lg:w-3/5">
-        <h1 className="text-6xl text-white font-rancho mb-4">
+      <div className="lg:w-3/5 px-5">
+        <h1 className=" text-4xl md:text-6xl text-white font-rancho mb-4">
           Would you like a Cup of Delicious Coffee?
         </h1>
         <p className="max-w-2xl leading-relaxed text-white font-raleway mb-4">

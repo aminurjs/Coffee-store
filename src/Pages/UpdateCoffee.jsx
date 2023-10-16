@@ -1,9 +1,10 @@
 import { BsArrowLeft } from "react-icons/bs";
 import { Link, useLoaderData } from "react-router-dom";
+import swal from "sweetalert";
 
 const UpdateCoffee = () => {
   const coffee = useLoaderData();
-  const { name, chef, supplier, taste, category, details, photo } = coffee;
+  const { _id, name, chef, supplier, taste, category, details, photo } = coffee;
   const handleCoffeeUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -24,6 +25,24 @@ const UpdateCoffee = () => {
       photo,
     };
     console.log(updateCoffee);
+
+    fetch(`http://localhost:5000/coffee/update/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updateCoffee),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          swal({
+            title: "Updated Success!",
+            icon: "success",
+          });
+        }
+      });
   };
 
   return (
@@ -36,7 +55,7 @@ const UpdateCoffee = () => {
           <BsArrowLeft></BsArrowLeft> Back to home
         </Link>
       </div>
-      <div className="mb-28 max-w-7xl mx-auto bg-[#F4F3F0] py-16 px-28">
+      <div className="mb-28 max-w-7xl mx-auto bg-[#F4F3F0] py-16 px-5 lg:px-28">
         <h1 className="text-4xl text-[#374151] font-rancho mb-4 text-center">
           Update Coffee
         </h1>
@@ -47,8 +66,8 @@ const UpdateCoffee = () => {
           letters, as opposed to using Content here.
         </p>
         <form onSubmit={handleCoffeeUpdate}>
-          <div className="flex gap-6 justify-between">
-            <div className="w-1/2 mb-6">
+          <div className="md:flex gap-6 justify-between">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -69,7 +88,7 @@ const UpdateCoffee = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2 mb-6">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -91,8 +110,8 @@ const UpdateCoffee = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-6 justify-between">
-            <div className="w-1/2 mb-6">
+          <div className="md:flex gap-6 justify-between">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -113,7 +132,7 @@ const UpdateCoffee = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2 mb-6">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -135,8 +154,8 @@ const UpdateCoffee = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-6 justify-between">
-            <div className="w-1/2 mb-6">
+          <div className="md:flex gap-6 justify-between">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"
@@ -157,7 +176,7 @@ const UpdateCoffee = () => {
                 />
               </div>
             </div>
-            <div className="w-1/2 mb-6">
+            <div className="md:w-1/2 mb-6">
               <div>
                 <label
                   className="text-lg font-semibold text-[#374151] opacity-80 mb-3 block"

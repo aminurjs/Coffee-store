@@ -11,7 +11,7 @@ const Instagram = () => {
   ];
 
   return (
-    <div className="my-28 max-w-7xl mx-auto">
+    <div className="my-28 max-w-7xl mx-auto px-5">
       <p className="text-lg leading-relaxed text-[#1b1a1a] font-raleway mb-4 text-center">
         Follow Us Now
       </p>

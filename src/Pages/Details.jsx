@@ -21,7 +21,7 @@ const Details = () => {
         </Link>
       </div>
       <div className="max-w-5xl mx-auto pb-16">
-        <div className="flex items-center gap-10 py-16 px-40 bg-[#F5F4F1]">
+        <div className="flex items-center gap-10 py-16 px-5 md:px-10 lg:px-40 bg-[#F5F4F1]">
           <img className="w-2/5" src={photo} alt="" />
           <div>
             <h3 className="text-lg text-[#1b1a1a] font-bold font-raleway mb-3">
